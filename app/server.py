@@ -8,6 +8,7 @@ from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
+from starlette.schemas import SchemaGenerator
 
 export_file_url = 'https://drive.google.com/uc?export=download&id=1meRHyDU1ZVme5NzdJotxROWnkWsl07Iq'
 export_file_name = 'export.pkl'
@@ -63,6 +64,9 @@ async def analyze(request):
     prediction = learn.predict(img)[0]
     return JSONResponse({'result': str(prediction)})
 
+@app.route("/schema", methods=["GET"], include_in_schema=False)
+def openapi_schema(request):
+    return schemas.OpenAPIResponse(request=request)
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
