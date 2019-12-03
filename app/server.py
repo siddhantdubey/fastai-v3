@@ -10,10 +10,10 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 from starlette.schemas import SchemaGenerator
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1meRHyDU1ZVme5NzdJotxROWnkWsl07Iq'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1-EJbLJEGgQpGZEobSIxnsbG_WrJrBJa_'
 export_file_name = 'export.pkl'
 
-classes = ['sweep', 'coverdrive', 'straightdrive', 'helicopter', 'scopp', 'pull']
+classes = ['trash', 'plastic', 'paper', 'metal', 'glass', 'cardboard']
 path = Path(__file__).parent
 
 app = Starlette()
