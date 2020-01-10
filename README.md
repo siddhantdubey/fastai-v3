@@ -1,1 +1,1 @@
-A Cricket shot classifier.
+A waste classifier.
