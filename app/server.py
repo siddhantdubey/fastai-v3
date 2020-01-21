@@ -10,7 +10,7 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 from starlette.schemas import SchemaGenerator
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1-MhkPTIqbvwHPE7uLHvmqPgn7ZSPaZgX'
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1T6nZ6KJWPeASo8RsLtmesTsQ1xMyHBN0?alt=media&key=AIzaSyCghsAjmLyHUE1IZiAk_eitH_ufn6Q0yuk'
 export_file_name = 'export.pkl'
 
 classes = ['trash', 'plastic', 'paper', 'metal', 'glass', 'cardboard']
